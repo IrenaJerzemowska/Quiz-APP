@@ -1,0 +1,83 @@
+
+name = input("Jak masz na imię?")
+name = name.title()
+print("""Cześc {}, witaj w Quizie dla Geekow literackich!
+Jest to aplikacja, dla osob ktore uwielbiaja literature angielską
+powodzenia!""".format(name))
+
+print("-----------------------------------------")
+print("Witaj w aplikacji 'Zdaj z Literatury Angielskiej!")
+import time, threading
+def run():
+    time.sleep(10)
+    next.question()
+thread = threading.Thread(target = run)
+thread.start()
+def pytania_z_literatury_ogolnej():
+
+
+    answer = input("Kto napisał 'The Wasteland'? ")
+    if answer == 'T.S.Elliot':
+        print("Dobra odpowiedź!")
+    else:
+        print(f"Niestety, odpowiedź to 'T.S.Elliot', a nie {answer!r}") #f oznacza ze to formatted string, czyli f string, a r oznacza ze odpowiedz powinna byc udzielona na bazie jej prezentacji
+
+    answer = input("Jaki jest tytuł książki napisanej przez Josepha Hellera, w której główny bohater nazywa się Yossarian? ")
+    if answer == 'Paragraf 22':
+        print("Dobra odpowiedź!")
+    else:
+        print(f"Niestety, odpowiedź to 'Paragraf 22', a nie {answer!r}")
+
+    answer = input("Jak nazywa się główny bohater książki 'Frankenstein'? ")
+    if answer == 'Wiktor':
+        print("Dobra odpowiedź!")
+    else:
+        print(f"Niestety, odpowiedź to 'Wiktor', a nie {answer!r}")
+pytania_z_literatury_ogolnej()
+def pytania_z_fantasy():
+    QUESTIONS = [
+        ("Kto napisał 'Władce Pierscieni'? ", "J.R.R.Tolkien"),
+        ("Jak nazywa się główny bohater książki 'Beowulf'? ", "Beowulf"),
+        ("Jak nazywa się pierwsza powieść o duchach w literaturze angielskiej? ", "Zamczysko w Otranto") ]
+
+    for question, correct_answer in QUESTIONS:
+        answer = input(f"{question}? ")
+        if answer == correct_answer:
+            print("Dobra odpowiedź!")
+        else:
+            print(f"Odpowiedź prawidłowa to {correct_answer!r}, not {answer!r}")
+pytania_z_fantasy()
+
+def wielokrotny_wybor():
+ UESTIONS = {
+        "Jak nazywa się opowiadanie Edgara Allana Poego o kobiecie, której zęby go prześladowały": [
+            "Berenice", "Angela", "Karyna", "Michał"
+        ],
+        "Jaki nurt literacki reprezentowala Virginia Woolf" : [
+        "PostModernizm", "Modernizm", "Romantyzm", "Nie wiem"
+        ],
+
+        "Kto napisał 'Panią Dalloway'" : [
+            "Virginia Woolf",
+            "Juliusz Verne",
+            "Juliusz Cezar",
+            "Pani Dalloway"
+        ],
+ }
+
+def quiz_prawda_fałsz(question, correct_ans):
+
+         if input(question) == correct_ans:
+              print("Zgadza się!")
+         else:
+             print("Niestety to zła odpowiedź!")
+quiz_evaluation = quiz_prawda_fałsz("Czy H.G.Wells napisał niewidzialnego czlowieka?","Prawda")
+print("your answer is", quiz_evaluation)
+
+quiz_evaluation = quiz_prawda_fałsz("Czy J.R.R. Tolkien był brytyjczykiem?", "Prawda")
+print("your answer is", quiz_evaluation)
+
+quiz_evaluation = quiz_prawda_fałsz("Czy Lolita to powiesc dla dzieci?", "Fałsz")
+print("your answer is", quiz_evaluation)
+
+
